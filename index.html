@@ -1,0 +1,417 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rufus - Create bootable USB drives easily</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="http://rufus.ie/pics/rufus-128.png" alt="Rufus Logo" class="logo" width="80" height="80">
+    <h1>Rufus</h1>
+    <p class="tagline">The ultimate tool for creating bootable USB drives with style and simplicity</p>
+  </header>
+
+  <main>
+    <div class="download-card">
+      <div class="version-info">
+        <h2>Rufus 4.6</h2>
+        <p>Create bootable USB drives the easy way</p>
+      </div>
+
+      <div class="download-options">
+        <table class="download-table">
+          <thead>
+            <tr>
+              <th>Download</th>
+              <th>Type</th>
+              <th>Platform</th>
+              <th>Size</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" class="download-link">
+                  <i class="fas fa-download"></i>
+                  rufus-4.6.exe
+                </a>
+              </td>
+              <td>Standard</td>
+              <td><span class="platform-badge">Windows x64</span></td>
+              <td class="file-size">1.5 MB</td>
+              <td>2024.10.21</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe" class="download-link">
+                  <i class="fas fa-download"></i>
+                  rufus-4.6p.exe
+                </a>
+              </td>
+              <td>Portable</td>
+              <td><span class="platform-badge">Windows x64</span></td>
+              <td class="file-size">1.5 MB</td>
+              <td>2024.10.21</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6_x86.exe" class="download-link">
+                  <i class="fas fa-download"></i>
+                  rufus-4.6_x86.exe
+                </a>
+              </td>
+              <td>Standard</td>
+              <td><span class="platform-badge">Windows x86</span></td>
+              <td class="file-size">1.6 MB</td>
+              <td>2024.10.21</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6_arm64.exe" class="download-link">
+                  <i class="fas fa-download"></i>
+                  rufus-4.6_arm64.exe
+                </a>
+              </td>
+              <td>Standard</td>
+              <td><span class="platform-badge">Windows ARM64</span></td>
+              <td class="file-size">5.1 MB</td>
+              <td>2024.10.21</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="other-downloads">
+          <a href="https://rufus.ie/downloads/" class="other-download-link">Other versions (GitHub)</a>
+          <a href="https://www.fosshub.com/Rufus.html" class="other-download-link">Other versions (FossHub)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="screenshots-section">
+      <h2>Screenshots</h2>
+      <div class="screenshot-slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="http://rufus.ie/pics/screenshot1_en.png" alt="Rufus Screenshot 1">
+          </div>
+          <div class="slide">
+            <img src="http://rufus.ie/pics/screenshot2_en.png" alt="Rufus Screenshot 2">
+          </div>
+          <div class="slide">
+            <img src="http://rufus.ie/pics/screenshot3_en.png" alt="Rufus Screenshot 3">
+          </div>
+          <div class="slide">
+            <img src="http://rufus.ie/pics/screenshot4_en.png" alt="Rufus Screenshot 4">
+          </div>
+          <div class="slide">
+            <img src="http://rufus.ie/pics/screenshot5_en.png" alt="Rufus Screenshot 5">
+          </div>
+        </div>
+        
+        <div class="slider-nav">
+          <button class="slider-button prev-button">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button class="slider-button next-button">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+        
+        <div class="slider-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2><i class="fas fa-info-circle"></i> About Rufus</h2>
+      <p>Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.</p>
+      
+      <p>It can be especially useful for cases where:</p>
+      <ul>
+        <li>you need to create USB installation media from bootable ISOs (Windows, Linux, UEFI, etc.)</li>
+        <li>you need to work on a system that doesn't have an OS installed</li>
+        <li>you need to flash a BIOS or other firmware from DOS</li>
+        <li>you want to run a low-level utility</li>
+      </ul>
+      
+      <p>Despite its small size, Rufus provides everything you need!</p>
+      
+      <p class="note">(1) A non exhaustive list of Rufus supported ISOs is also provided at the bottom of this page.</p>
+
+      <div class="requirements">
+        <h3><i class="fas fa-desktop"></i> System Requirements</h3>
+        <p>Windows 8 or later. Once downloaded, the application is ready to use.</p>
+      </div>
+
+      <div class="languages">
+        <h3><i class="fas fa-language"></i> Supported Languages</h3>
+        <div class="language-grid">
+          <span>Bahasa Indonesia</span>
+          <span>Bahasa Malaysia</span>
+          <span>Български</span>
+          <span>Čeština</span>
+          <span>Dansk</span>
+          <span>Deutsch</span>
+          <span>Ελληνικά</span>
+          <span>English</span>
+          <span>Español</span>
+          <span>Français</span>
+          <span>Hrvatski</span>
+          <span>Italiano</span>
+          <span>Latviešu</span>
+          <span>Lietuvių</span>
+          <span>Magyar</span>
+          <span>Nederlands</span>
+          <span>Norsk</span>
+          <span>Polski</span>
+          <span>Português</span>
+          <span>Português do Brasil</span>
+          <span>Русский</span>
+          <span>Română</span>
+          <span>Slovensky</span>
+          <span>Slovenščina</span>
+          <span>Srpski</span>
+          <span>Suomi</span>
+          <span>Svenska</span>
+          <span>Tiếng Việt</span>
+          <span>Türkçe</span>
+          <span>Українська</span>
+          <span>简体中文</span>
+          <span>正體中文</span>
+          <span>日本語</span>
+          <span>한국어</span>
+          <span>ไทย</span>
+          <span>עברית</span>
+          <span>العربية</span>
+          <span>پارسی</span>
+        </div>
+        <p class="translator-note">I will take this opportunity to express my gratitude to the translators who made it possible for Rufus, as well as this webpage, to be translated in various languages. If you find that you can use Rufus in your own language, you should really thank them!</p>
+      </div>
+    </div>
+
+    <section class="features">
+      <h2><i class="fas fa-star"></i> Why Choose Rufus?</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fas fa-hdd feature-icon"></i>
+          <h3>Smart Formatting</h3>
+          <p>Intelligent USB drive formatting with support for all major file systems and optimal settings for your needs.</p>
+        </div>
+        
+        <div class="feature">
+          <i class="fas fa-usb feature-icon"></i>
+          <h3>Universal Boot Support</h3>
+          <p>Create bootable drives from any ISO or IMG file, with comprehensive support for OS installations.</p>
+        </div>
+        
+        <div class="feature">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>Enhanced Security</h3>
+          <p>Built-in checksum validation and secure download verification to ensure data integrity.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="usage-section">
+      <h2><i class="fas fa-book"></i> Usage</h2>
+      <p>Download the executable and run it – no installation is necessary.</p>
+      
+      <div class="signature-info">
+        <h3><i class="fas fa-signature"></i> Digital Signature</h3>
+        <p>The executable is digitally signed and the signature should state:</p>
+        <ul>
+          <li>"Akeo Consulting" (v1.3.0 or later)</li>
+          <li>"Pete Batard - Open Source Developer" (v1.2.0 or earlier)</li>
+        </ul>
+      </div>
+
+      <div class="notes-section">
+        <h3><i class="fas fa-terminal"></i> Notes on DOS support</h3>
+        <p>If you create a DOS bootable drive and use a non-US keyboard, Rufus will attempt to select a keyboard layout according to the locale of your system.</p>
+
+        <h3><i class="fas fa-compact-disc"></i> Notes on ISO Support</h3>
+        <p>All versions of Rufus since v1.1.0 allow the creation of a bootable USB from an ISO image (.iso).</p>
+        <p>Creating an ISO image from a physical disc or from a set of files is very easy to do however, through the use of a CD burning application, such as the freely available InfraRecorder or CDBurnerXP.</p>
+      </div>
+
+      <div class="faq-section">
+        <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions (FAQ)</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I create a bootable Windows USB drive with Rufus?</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>1. Download the Windows ISO from Microsoft's website<br>
+               2. Launch Rufus and insert your USB drive<br>
+               3. Select your USB drive in the "Device" dropdown<br>
+               4. Click "SELECT" and choose your Windows ISO<br>
+               5. Click "START" and wait for the process to complete<br>
+               The process typically takes 10-20 minutes depending on your USB drive speed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Why does Rufus say "ISO Image" is corrupted?</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>This usually happens when:<br>
+               - The ISO file download was incomplete or corrupted<br>
+               - The ISO file is not a proper bootable image<br>
+               - There's not enough space on the USB drive<br>
+               Try downloading the ISO file again and verify its checksum if available.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is it safe to use Rufus?</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, Rufus is completely safe when downloaded from official sources. It's open-source, regularly audited by the community, and digitally signed. However, be aware that the process will erase all data on the selected USB drive, so back up any important files before using it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What's the difference between DD Image and ISO Image mode?</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>- ISO Image mode: Creates a bootable drive using standard ISO format, allowing for additional customization options. Best for Windows installations.<br>
+               - DD Image mode: Creates an exact byte-by-byte copy of the image. Required for some Linux distributions and other specific use cases where the exact image structure must be preserved.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Why is my USB drive capacity smaller after using Rufus?</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>This is normal and happens because:<br>
+               - The drive was formatted with a different file system<br>
+               - The partition structure was changed during the creation of the bootable drive<br>
+               To restore the full capacity, simply reformat the drive using Windows' built-in formatting tool or Rufus itself.</p>
+          </div>
+        </div>
+
+        <p>For more FAQs, visit the <a href="https://github.com/pbatard/rufus/wiki/FAQ">complete FAQ page</a> or use the <a href="https://github.com/pbatard/rufus/issues">GitHub issue tracker</a> for additional support.</p>
+      </div>
+
+      <div class="license-section">
+        <h3><i class="fas fa-file-contract"></i> License</h3>
+        <p>GNU General Public License (GPL) version 3 or later.</p>
+        <p>You are free to distribute, modify or even sell the software, insofar as you respect the GPLv3 license.</p>
+        <p>Rufus is produced in a 100% transparent manner, from its public source, using a MinGW32 environment.</p>
+      </div>
+
+      <div class="changelog-section">
+        <h3><i class="fas fa-history"></i> Changelog</h3>
+        <h4>Version 4.6 (2024.10.21)</h4>
+        <ul>
+          <li>Add a new setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions</li>
+          <li>Add TimeZone to regional options replication</li>
+          <li>Set local account passwords to not expire by default</li>
+          <li>Fix an error when trying to write compressed VHD images</li>
+          <li>Fix an error when invoking Rufus from the PowerShell commandline</li>
+          <li>Improve revoked UEFI bootloaders check to support Linux SBAT, Windows SVN and cert DBX</li>
+          <li>Improve support for ReactOS boot media</li>
+        </ul>
+      </div>
+
+      <div class="source-code-section">
+        <h3><i class="fas fa-code"></i> Source Code</h3>
+        <p>Rufus 4.6 (<a href="https://github.com/pbatard/rufus/archive/v4.6.zip">6.4 MB</a>)</p>
+        <p>Alternatively, you can clone the git repository using:</p>
+        <code>$ git clone https://github.com/pbatard/rufus</code>
+        <p>For more information, see the <a href="https://github.com/pbatard/rufus">GitHub project</a>.</p>
+        <p>If you are a developer, you are very much encouraged to tinker with Rufus and submit patches.</p>
+      </div>
+
+      <div class="donations-section">
+        <h3><i class="fas fa-hand-holding-heart"></i> Donations</h3>
+        <p>Since I'm getting asked about this on regular basis, there is no donation button on this page.</p>
+        <p>The main reason is that I feel that the donation system doesn't actually help software development and worse, can be guilt-inducing for users who choose not to donate.</p>
+        <p>Instead, I think that "mécénat" or developer patronage, from companies which benefit most from a healthy FLOSS ecosystem, is what we should be aiming for. This is because, unless they are backed by a company, developers who want to provide quality Open Source software cannot realistically sustain full time development, no matter how generous their software users are.</p>
+        <p>Also, unless you are blocking them (hint, hint), you'll notice that there are ads on this page, which I consider sufficient revenue enough.</p>
+        <p>Finally the fact that I have the freedom to develop Free Software in my spare time should indicate that I'm well-off enough, and therefore that you should direct your generosity towards people who need it a lot more than I do. If you really insist, you can always make a donation to the Free Software Foundation, as they are the main reason software like Rufus is possible.</p>
+        <p>At any rate, I'll take this opportunity to say thank you for your continuing support and enthusiasm about this little program: it is much appreciated!</p>
+        <p>But please continue to feel free to use Rufus without any guilt about not contributing for it financially – you should never have to!</p>
+      </div>
+
+      <div class="supported-iso-section">
+        <h3><i class="fas fa-cd"></i> Supported ISO Images</h3>
+        <p>Non exhaustive list of ISOs Rufus is known to work with:</p>
+        <div class="iso-grid">
+          <span>AlmaLinux</span>
+          <span>Arch Linux</span>
+          <span>Archboot</span>
+          <span>CentOS</span>
+          <span>Clonezilla</span>
+          <span>Damn Small Linux</span>
+          <span>Debian</span>
+          <span>Elementary OS</span>
+          <span>Fedora</span>
+          <span>FreeDOS</span>
+          <span>Garuda Linux</span>
+          <span>Gentoo</span>
+          <span>GParted</span>
+          <span>Hiren's Boot CD</span>
+          <span>Kali Linux</span>
+          <span>Knoppix</span>
+          <span>KolibriOS</span>
+          <span>Linux Mint</span>
+          <span>Manjaro Linux</span>
+          <span>NT Password Registry Editor</span>
+          <span>OpenSUSE</span>
+          <span>Raspberry Pi OS</span>
+          <span>Raspbian</span>
+          <span>ReactOS</span>
+          <span>Red Hat</span>
+          <span>rEFInd</span>
+          <span>Rocky Linux</span>
+          <span>Slackware</span>
+          <span>Super Grub2 Disk</span>
+          <span>Tails</span>
+          <span>Trinity Rescue Kit</span>
+          <span>TrueNAS CORE</span>
+          <span>Ubuntu</span>
+          <span>UEFI Shell</span>
+          <span>Ultimate Boot CD</span>
+          <span>Windows XP (SP2+)</span>
+          <span>Windows Vista</span>
+          <span>Windows 7</span>
+          <span>Windows 8/8.1</span>
+          <span>Windows 10</span>
+          <span>Windows Server 2019</span>
+          <span>Windows 11</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Rufus is free and open source software • <a href="https://github.com/pbatard/rufus">View on GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
