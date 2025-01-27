@@ -1,16 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Smooth scroll for anchor links
+  const smoothScroll = (target) => {
+    target.scrollIntoView({ behavior: 'smooth' });
+  };
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', (e) => {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      smoothScroll(document.querySelector(anchor.getAttribute('href')));
     });
   });
 
   // Add hover animation to features
-  const features = document.querySelectorAll('.feature');
+  const features = document.getElementsByClassName('feature');
   
   features.forEach(feature => {
     feature.addEventListener('mouseenter', () => {
@@ -24,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Update the download button click tracking to work with multiple buttons
-  document.querySelectorAll('.download-link').forEach(button => {
+  const downloadLinks = document.getElementsByClassName('download-link');
+  downloadLinks.forEach(button => {
     button.addEventListener('click', (e) => {
       // Add click effect
       button.style.transform = 'scale(0.98)';
@@ -50,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Observe features
-  document.querySelectorAll('.feature').forEach(feature => {
+  features.forEach(feature => {
     feature.style.opacity = '0';
     feature.style.transform = 'translateY(20px)';
     feature.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -58,32 +61,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Add FAQ accordion functionality
-  const faqItems = document.querySelectorAll('.faq-item');
-  
-  faqItems.forEach(item => {
+  function toggleFAQ(item) {
     const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = question.querySelector('i');
     
-    question.addEventListener('click', () => {
-      const answer = item.querySelector('.faq-answer');
-      const icon = question.querySelector('i');
-      
-      // Close other open items
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.querySelector('.faq-answer').style.maxHeight = null;
-          otherItem.querySelector('.faq-question i').className = 'fas fa-plus';
-        }
-      });
-      
-      // Toggle current item
-      if (answer.style.maxHeight) {
-        answer.style.maxHeight = null;
-        icon.className = 'fas fa-plus';
-      } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        icon.className = 'fas fa-minus';
+    // Close other open items
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        otherItem.querySelector('.faq-question i').className = 'fas fa-plus';
       }
     });
+    
+    // Toggle current item
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+      icon.className = 'fas fa-plus';
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.className = 'fas fa-minus';
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.faq-question')) {
+      toggleFAQ(e.target.closest('.faq-item'));
+    }
   });
 
   // Slider functionality

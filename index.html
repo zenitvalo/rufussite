@@ -4,12 +4,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rufus - Create bootable USB drives easily</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Critical fonts loaded inline -->
+  <style>
+    /* Inter font subset */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(data:font/woff2;base64,d09GMgABAAAAAC[...]AAAAAAAAA=) format('woff2');
+    }
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(data:font/woff2;base64,d09GMgABAAAAAB[...]AAAAAAAAA=) format('woff2');
+    }
+    
+    /* Critical Font Awesome icons */
+    .fas {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+    }
+    .fa-download:before { content: "\f019"; }
+    .fa-plus:before { content: "\f067"; }
+    .fa-minus:before { content: "\f068"; }
+    /* Add other critical icons as needed */
+  </style>
+
+  <!-- Preload key assets -->
+  <link rel="preload" href="https://rufus.ie/pics/rufus-128.webp" as="image" type="image/webp">
+  
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
   <header>
-    <img src="http://rufus.ie/pics/rufus-128.png" alt="Rufus Logo" class="logo" width="80" height="80">
+    <!-- Convert PNG to WebP -->
+    <img src="https://rufus.ie/pics/rufus-128.webp" alt="Rufus Logo" class="logo" width="80" height="80">
     <h1>Rufus</h1>
     <p class="tagline">The ultimate tool for creating bootable USB drives with style and simplicity</p>
   </header>
@@ -96,19 +130,19 @@
       <div class="screenshot-slider">
         <div class="slides">
           <div class="slide">
-            <img src="http://rufus.ie/pics/screenshot1_en.png" alt="Rufus Screenshot 1">
+            <img src="http://rufus.ie/pics/screenshot1_en.webp" alt="Rufus Screenshot 1" width="800" height="600">
           </div>
           <div class="slide">
-            <img src="http://rufus.ie/pics/screenshot2_en.png" alt="Rufus Screenshot 2">
+            <img src="http://rufus.ie/pics/screenshot2_en.webp" alt="Rufus Screenshot 2" width="800" height="600">
           </div>
           <div class="slide">
-            <img src="http://rufus.ie/pics/screenshot3_en.png" alt="Rufus Screenshot 3">
+            <img src="http://rufus.ie/pics/screenshot3_en.webp" alt="Rufus Screenshot 3" width="800" height="600">
           </div>
           <div class="slide">
-            <img src="http://rufus.ie/pics/screenshot4_en.png" alt="Rufus Screenshot 4">
+            <img src="http://rufus.ie/pics/screenshot4_en.webp" alt="Rufus Screenshot 4" width="800" height="600">
           </div>
           <div class="slide">
-            <img src="http://rufus.ie/pics/screenshot5_en.png" alt="Rufus Screenshot 5">
+            <img src="http://rufus.ie/pics/screenshot5_en.webp" alt="Rufus Screenshot 5" width="800" height="600">
           </div>
         </div>
         
@@ -412,6 +446,6 @@
     <p>Rufus is free and open source software • <a href="https://github.com/pbatard/rufus">View on GitHub</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
